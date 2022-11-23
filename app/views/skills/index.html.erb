@@ -1,20 +1,18 @@
-<div class="container mt-5">
-<h3 class="+mt-5">All skills</h3>
-  <div class="cards  mt-5">
-    <% @skills.each do |skill| %>
-
-          <div class="card-trip">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= skill.name %></h2>
-                <p><%= skill.description %></p>
-              </div>
-              <h2 class="card-trip-pricing"><%= skill.price %></h2>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-            </div>
-          </div>
-
-    <% end %>
-  </div>
+<div class="container my-5">
+<div class="cards">
+<% @skills.each do |skill| %>
+    <a href="../skills/<%= skill.id%>" >
+    <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= "#{skill.name}" %></h2>
+        <p><%= "Level #{skill.level}" %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= "#{skill.price}" %></h2>
+    </div>
+    </div>
+    </a>
+<% end %>
+</div>
 </div>

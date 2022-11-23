@@ -5,7 +5,7 @@
   <%= skill.price %>
   <%= skill.level %>
   <%= link_to "Edit my skill", edit_skill_path(skill) %>
-  <%= link_to "Delete this skill", skill_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %>
+  <%# <%= link_to "Delete this skill", skill_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{skill.name} from your skills?"} %> %>
 <% end %>
 
 <a class="btn btn-ghost" href="skills/new">Add a new skill</a>
